@@ -1,5 +1,5 @@
 #introCover{
-    background: url("/img/lightBulb.jpg") no-repeat center center;
+    background: url("../img/lightBulb.jpg") no-repeat center center;
     background-size: cover;
     width: auto;
     height: 100vh;
@@ -10,15 +10,17 @@
         .navOne{
             display: flex;
             justify-content: flex-end;
+            position: relative;
             .menuBtn{
                 font-size: 2.5rem;
                 position: fixed;
-                width: 100%;
-                height: 100%;
-                padding: 1rem .5rem;
+                left: 1rem;
+                top: 1rem;
+                z-index: 100;
+                width: 3rem;
                 a{
                     box-shadow: 1px 3px 40px 2px rgba(255,255,255,0.8);
-                    overflow: hidden;
+                    // overflow: hidden;
                     padding: .5rem;
                     color: rgb(255, 255, 255);
                     background-color: rgba(0, 0, 0, 0.603);
@@ -78,6 +80,7 @@
                     padding: .5rem;
                     color: rgb(255, 255, 255);
                     background-color: rgba(0, 0, 0, 0.603);
+                    border-radius: 30%;
                 }
             }
         }

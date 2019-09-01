@@ -19,7 +19,6 @@ closeBtn[0].addEventListener('click', clickedBtn);
 
 for(var i = 0; i < 4; i++){
     mobileBtn[i].addEventListener('click', clickedBtn);
-    console.log(mobileBtn[i]);
 }
 
 menuButton[0].addEventListener('click', clickedBtn);
@@ -28,6 +27,7 @@ menuButton[0].addEventListener('click', clickedBtn);
 // services section see more button
 var seeMore = document.getElementsByClassName("seeMoreBtn");
 var blockContainer = document.getElementsByClassName("blockContainer");
+console.log(blockContainer[0]);
 
 var seeMoreClicked = function() {
     blockContainer[0].classList.toggle('moreServices');

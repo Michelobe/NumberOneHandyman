@@ -2,7 +2,10 @@
 var menuButton = document.getElementsByClassName('menuBtn');
 var mobileMenu = document.getElementsByClassName('mobileMenu');
 var closeBtn = document.getElementsByClassName('closeBtn');
-
+var mobileBtn = [];
+for(var i = 0; i < 4; i++){
+    mobileBtn.push(document.getElementsByClassName('mobileBtn')[i]);
+}
 
 // console.log(closeBtn[0]);
 
@@ -11,6 +14,13 @@ var clickedBtn = function() {
 }
 
 closeBtn[0].addEventListener('click', clickedBtn);
+
+// mobileBtn[0].addEventListener('click', clickedBtn);
+
+for(var i = 0; i < 4; i++){
+    mobileBtn[i].addEventListener('click', clickedBtn);
+    console.log(mobileBtn[i]);
+}
 
 menuButton[0].addEventListener('click', clickedBtn);
 

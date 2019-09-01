@@ -1,0 +1,122 @@
+#servicesCover{
+    height: 100%;
+    padding: 2rem 0;
+    .container{
+        text-align: center;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        .servicesHeader{
+            display: flex;
+            align-items: center;
+            width: 60%;
+            margin: 0 auto 2rem auto;
+            border-bottom: 2px solid black;
+            h1{
+                margin: 1.5rem auto;
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+        }
+        // applies to all blocks:
+        .blockContainer{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            width: 80%;
+            margin: 0 auto;
+            height: 540px;
+            overflow: hidden;
+            // flip imag =================================
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #f1f1f1;
+            perspective: 1000px; /* Remove this if you don't want the 3D effect */
+            // flip imag ==================================
+            &:hover{
+                .serviceBlock{
+                    transform: rotateY(180deg);
+                }
+            }
+            // javascript add more services button
+            &.moreServices{
+                height: auto;
+            }
+            .serviceBlock{
+                width: 100%;
+                height: 100%;
+                height: 250px;
+                margin: .5rem 0;
+                position: relative;
+                // flip imag ==================================
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+                // flip imag ==================================
+                .flipBoxFront{
+                    width: 100%;
+                    height: 100%;
+                    // flip imag ==================================
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    backface-visibility: hidden;
+                    // flip imag ==================================
+                    .blockOverlay{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: center;
+                        align-items: center;
+                        background: rgba(0, 0, 0, 0.486);
+                        color: yellow;
+                        font-size: 2rem;
+                    }
+                }
+                .flipBoxBack{
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+        // applies to individual blocks:
+        .blockOne{
+            background: url("/img/constructionSaw.jpg") center center no-repeat;
+        }
+        .blockTwo{
+            background: url("/img/electrical.jpg") center center no-repeat;
+        }
+        .blockThree{
+            background: url("/img/plumbing.jpg") top center no-repeat;
+        }
+        .blockFour{
+            background: url("/img/woodFloor.jpg") center center no-repeat;
+        }
+        .blockFive{
+            background: url("/img/harleyDavidson.jpg") top center no-repeat;
+        }
+        .blockSix{
+            background: url("/img/engine.jpg") center center no-repeat;
+        }
+        .seeMoreBtn{
+            background-color: rgba(0, 0, 0, 0.808);
+            text-align: center;
+            padding: .5rem 1.5rem;
+            margin: 1rem auto;
+            width: 10rem;
+            line-height: 1.5;
+            border-radius: 50px;
+            &:hover{
+                cursor: pointer;
+            }
+            h5{
+                color: rgb(238, 255, 0);
+            }
+        }
+    }
+}

@@ -15,8 +15,15 @@ closeBtn[0].addEventListener('click', clickedBtn);
 menuButton[0].addEventListener('click', clickedBtn);
 
 
+// services section see more button
+var seeMore = document.getElementsByClassName("seeMoreBtn");
+var blockContainer = document.getElementsByClassName("blockContainer");
 
+var seeMoreClicked = function() {
+    blockContainer[0].classList.toggle('moreServices');
+}
 
+seeMore[0].addEventListener('click', seeMoreClicked);
 
 
 

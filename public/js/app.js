@@ -7,7 +7,6 @@ for(var i = 0; i < 4; i++){
     mobileBtn.push(document.getElementsByClassName('mobileBtn')[i]);
 }
 
-// console.log(closeBtn[0]);
 
 var clickedBtn = function() {
     mobileMenu[0].classList.toggle('active');
@@ -15,7 +14,6 @@ var clickedBtn = function() {
 
 closeBtn[0].addEventListener('click', clickedBtn);
 
-// mobileBtn[0].addEventListener('click', clickedBtn);
 
 for(var i = 0; i < 4; i++){
     mobileBtn[i].addEventListener('click', clickedBtn);
@@ -26,11 +24,15 @@ menuButton[0].addEventListener('click', clickedBtn);
 
 // services section see more button
 var seeMore = document.getElementsByClassName("seeMoreBtn");
+//targeting child element "seeMore" 
+var seeMoreDisplay = document.getElementsByClassName("seeMore");
+
 var blockContainer = document.getElementsByClassName("blockContainer");
 console.log(blockContainer[0]);
 
 var seeMoreClicked = function() {
     blockContainer[0].classList.toggle('moreServices');
+    seeMoreDisplay[0].classList.toggle('active');
 }
 
 seeMore[0].addEventListener('click', seeMoreClicked);

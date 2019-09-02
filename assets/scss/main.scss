@@ -3,6 +3,8 @@
 @import "reset";
 @import "introCover";
 @import "servicesCover";
+@import "aboutCover";
+@import "contactCover";
 
 *{
   box-sizing: border-box;
@@ -16,7 +18,14 @@
   margin: 0 auto;
 }
 
-
+#footer{
+  color: white;
+  background: black;
+  padding: .5rem;
+  text-align: center;
+  font-size: .8rem;
+  line-height: 1.5;
+}
 
 
 
@@ -75,7 +84,7 @@
 
 // .contact-cover {
 //   background: url("images/black-brick.jpg") no-repeat center center fixed;
-//   background-size: 100% 100%;
+//   background-size: cover;
 //   width: auto;
 //   height: auto;
 // }

@@ -1,0 +1,62 @@
+#aboutCover{
+    background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, 
+                    hsla(0,0%,100%,0) 6%, hsla(0,0%,100%, .1) 7.5%), 
+                    -webkit-repeating-linear-gradient(left, hsla(0,0%, 0%,0) 0%, 
+                    hsla(0,0%, 0%,0) 4%, hsla(0,0%, 0%,.03) 4.5%), 
+                    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, 
+                    hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%), 
+                    linear-gradient(180deg, hsl(0,0%,78%) 0%, hsl(0,0%,90%) 47%, 
+                    hsl(0,0%,78%) 53%, hsl(0,0%,70%)100%);
+    padding: 0 0 2.5rem 0;
+    .container{
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        .aboutHeader{
+            width: 60%;
+            margin: 0 auto 2rem auto;
+            border-bottom: 2px solid rgb(75, 75, 75);
+            color: rgb(75, 75, 75);
+            h1{
+                margin: 1.5rem auto;
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+        }
+        .imgContainer{
+            width: 60%;
+            height: auto;
+            border: 5px solid #81f3c9;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            // opacity: 0;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .aboutInfo{
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.3;
+            letter-spacing: 2px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.671);
+            color: #81f3c9;
+            width: 90%;
+            border-radius: 20px;
+            h2{
+                font-size: 1.8rem;
+                padding: 1rem 0;
+            }
+            p{
+                width: 90%;
+                padding-bottom: 1.5rem;
+            }
+        }
+    }
+}

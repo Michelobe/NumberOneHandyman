@@ -6,11 +6,15 @@
     .container{
         width: 100%;
         background: rgba(0, 0, 0, 0.315);
-        height: 100%;
+        height: 100vh;
+        position: relative;
         .navOne{
             display: flex;
             justify-content: flex-end;
             position: relative;
+            width: 100%;
+
+            // menu button for cellphones
             .menuBtn{
                 font-size: 2.5rem;
                 position: fixed;
@@ -27,6 +31,27 @@
                     border-radius: 20%;
                 }
             }
+
+            // larger menu button for tablets
+            .tabletMenuBtn{
+                display: none;
+                font-size: 2.5rem;
+                position: fixed;
+                left: 1rem;
+                top: 1rem;
+                z-index: 100;
+                width: 3rem;
+                a{
+                    box-shadow: 1px 3px 40px 2px rgba(255,255,255,0.8);
+                    // overflow: hidden;
+                    padding: .5rem;
+                    color: rgb(255, 255, 255);
+                    background-color: rgba(0, 0, 0, 0.603);
+                    border-radius: 20%;
+                }
+            }
+
+            // tablet dropdown menu
             .mobileMenu{
                 display: flex;
                 position: fixed;
@@ -68,6 +93,21 @@
                     }
                 }
             }
+
+            // navigation menu for large tablets and pc's
+            .navMenu{
+                display: none;
+                font-size: 2.5rem;
+                border-radius: 5px;
+                background-color: rgba(0, 0, 0, 0.603);
+                box-shadow: 1px 3px 40px 2px rgba(255,255,255,0.8);
+                a{
+                    overflow: hidden;
+                    padding: .5rem;
+                    color: rgb(255, 255, 255);
+                    
+                }
+            }
             .socialIcons{
                 font-size: 2.5rem;
                 padding: 1rem;
@@ -89,9 +129,10 @@
             flex-flow: column;
             align-items: center;
             justify-content: center;
-            height: 100%;
+            height: 100vh;
             img{
-                width: 80%;
+                // width: 80%;
+                max-width: 325px;
                 max-height: 325px;
                 border: 1px solid rgba(100, 100, 100, .8);
                 border-radius: 25px;
@@ -103,7 +144,7 @@
                 @keyframes dropIn {
                     from {transform: translate3d(0, -100rem, 0);}
                     to {transform: translate3d(0, 0, 0);}
-                  }
+                }
             }
             p{
                 box-shadow: 1px 3px 40px 2px rgba(255,255,255,0.8);
@@ -111,7 +152,7 @@
                 padding: .5rem;
                 color: rgb(255, 255, 255);
                 background-color: rgba(0, 0, 0, 0.603);
-                font-size: 2rem;
+                font-size: 2.25rem;
                 padding: .5rem;
                 margin: 10px 0;
                 border-radius: 5px;
@@ -130,4 +171,95 @@
             }
         }
     }
-  }
+}
+
+
+
+
+
+
+
+//LARGE TABLETS AND DESKTOP ========================================================
+@media only screen and (min-width: 1000px){
+    #introCover{
+        .container{
+            .navOne{
+                .menuBtn{
+                    display: none;
+                }
+                .tabletMenuBtn{
+                    opacity: 0;
+                }
+                .navMenu{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 60%;
+                    padding: 1rem;
+                    margin-top: .5rem;
+                    position: absolute;
+                    left: 20%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// TABLETS =================================================================================
+@media only screen and (min-width: 700px){
+    #introCover{
+        .container{
+            .navOne{
+                display: flex;
+                justify-content: flex-end;
+                position: relative;
+                .menuBtn{
+                    display: none;
+                }
+                .tabletMenuBtn{
+                    display: block;
+                    font-size: 3.5rem;
+                    width: 6rem;
+                }
+                .mobileMenu{
+                    .closeBtn{
+                        font-size: 4rem;
+                    }
+                    .coverButtons {
+                        a{
+                            font-size: 4.5rem;
+                        }
+                    }
+                }
+                .socialIcons{
+                    font-size: 4rem;
+                    width: 7rem;
+                }
+            }
+            .coverContainer{
+                padding-bottom: 6rem;
+                img{
+                    max-width: 400px;
+                    max-height: 400px;
+                }
+                p{
+                    font-size: 3rem;
+                    &.intro{
+                        font-size: 3.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

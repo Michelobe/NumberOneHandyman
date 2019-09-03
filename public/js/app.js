@@ -2,24 +2,29 @@
 var menuButton = document.getElementsByClassName('menuBtn');
 var mobileMenu = document.getElementsByClassName('mobileMenu');
 var closeBtn = document.getElementsByClassName('closeBtn');
+var tabletBtn = document.getElementsByClassName('tabletMenuBtn');
+
+// loop to select all button elements necessary for manu
 var mobileBtn = [];
 for(var i = 0; i < 4; i++){
     mobileBtn.push(document.getElementsByClassName('mobileBtn')[i]);
 }
 
-
+// toggle menu position using active class
 var clickedBtn = function() {
     mobileMenu[0].classList.toggle('active');
 }
-
-closeBtn[0].addEventListener('click', clickedBtn);
-
-
+// loop necessary to enable all buttons in menu to be clicked
 for(var i = 0; i < 4; i++){
     mobileBtn[i].addEventListener('click', clickedBtn);
 }
 
+// OPEN MENU WITH MENU BUTTON
 menuButton[0].addEventListener('click', clickedBtn);
+// OPEN MENU WITH TABLET BUTTON
+tabletBtn[0].addEventListener('click', clickedBtn);
+// CLOSE MENU
+closeBtn[0].addEventListener('click', clickedBtn);
 
 
 // services section see more button

@@ -24,7 +24,12 @@
                 text-transform: uppercase;
             }
         }
-        .imgContainer{
+        .aboutInfoContainer{
+            text-align: center;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            .imgContainer{
             width: 60%;
             height: auto;
             border: 5px solid #81f3c9;
@@ -56,6 +61,30 @@
             p{
                 width: 90%;
                 padding-bottom: 1.5rem;
+            }
+        }
+        }
+        
+    }
+}
+
+
+
+// TABLET AND HIGHER
+@media only screen and (min-width: 700px){
+    #aboutCover{
+        padding: 4rem 0 5rem 0;
+        .container{
+            .aboutInfoContainer{
+                flex-flow: row;
+                padding: 1rem 0 0 0;
+                justify-content: space-around;
+                .imgContainer{
+                    width: 45%;
+                }
+                .aboutInfo{
+                    width: 45%;
+                }
             }
         }
     }

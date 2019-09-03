@@ -294,3 +294,39 @@
         }
     }
 }
+
+
+@media only screen and (min-width: 1000px){
+    #servicesCover{
+        .container{
+            .blockContainer{
+                .serviceBlock{
+                    .blockTwo{
+                        background-size: cover;
+                    }
+                    .blockSix{
+                        background-size: cover;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 960px){
+    #servicesCover{
+        .container{
+            .blockContainer{
+                width: 80%;
+                .serviceBlock{
+                    width: 40%;
+                    margin: .5rem 1rem;
+                }
+                
+            }
+            
+        }  
+    }
+}

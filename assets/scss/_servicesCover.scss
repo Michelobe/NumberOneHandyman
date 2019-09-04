@@ -262,7 +262,7 @@
             background-color: rgba(0, 0, 0, 0.808);
             text-align: center;
             padding: .5rem 1.5rem;
-            margin: 1rem auto;
+            margin: 1rem auto 2rem auto;
             font-size: 1.5rem;
             width: 10rem;
             line-height: 1.5;
@@ -296,6 +296,23 @@
 }
 
 
+@media only screen and (min-width: 960px){
+    #servicesCover{
+        .container{
+            .blockContainer{
+                width: 80%;
+                .serviceBlock{
+                    width: 40%;
+                    margin: .5rem 1rem;
+                }
+                
+            }
+            
+        }  
+    }
+}
+
+
 @media only screen and (min-width: 1000px){
     #servicesCover{
         .container{
@@ -311,22 +328,5 @@
                 
             }
         }
-    }
-}
-
-
-@media only screen and (min-width: 960px){
-    #servicesCover{
-        .container{
-            .blockContainer{
-                width: 80%;
-                .serviceBlock{
-                    width: 40%;
-                    margin: .5rem 1rem;
-                }
-                
-            }
-            
-        }  
     }
 }

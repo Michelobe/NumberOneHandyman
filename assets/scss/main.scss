@@ -5,6 +5,7 @@
 @import "servicesCover";
 @import "aboutCover";
 @import "contactCover";
+@import "reviewCover";
 
 *{
   box-sizing: border-box;
@@ -13,10 +14,10 @@
 
 
 
-.container{
-  max-width: 1400px;
-  margin: 0 auto;
-}
+// .container{
+//   max-width: 1400px;
+//   margin: 0 auto;
+// }
 
 #footer{
   color: white;

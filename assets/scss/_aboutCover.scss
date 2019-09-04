@@ -7,12 +7,15 @@
                     hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%), 
                     linear-gradient(180deg, hsl(0,0%,78%) 0%, hsl(0,0%,90%) 47%, 
                     hsl(0,0%,78%) 53%, hsl(0,0%,70%)100%);
-    padding: 0 0 2.5rem 0;
+    // padding: 0 0 2.5rem 0;
+    display: flex;
+    justify-content: center;
     .container{
         text-align: center;
         display: flex;
         flex-flow: column;
         align-items: center;
+        max-width: 1000px;
         .aboutHeader{
             width: 60%;
             margin: 0 auto 2rem auto;
@@ -73,7 +76,7 @@
 // TABLET AND HIGHER
 @media only screen and (min-width: 700px){
     #aboutCover{
-        padding: 4rem 0 5rem 0;
+        padding: 2rem 0 2.5rem 0;
         .container{
             .aboutInfoContainer{
                 flex-flow: row;

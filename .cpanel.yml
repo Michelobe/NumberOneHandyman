@@ -1,0 +1,19 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/michael3/public_html
+    - /bin/cp public/index.html $DEPLOYPATH
+    - /bin/cp public/landing.html $DEPLOYPATH
+    - /bin/cp public/generic.html $DEPLOYPATH
+
+    # to put css file in public_html/css
+    - export CSSPATH=/home/michael3/public_html/css
+    - /bin/cp public/css/* $CSSPATH
+    
+    # to put js file in public_html/js
+    - export JSPATH=/home/michael3/public_html/js
+    - /bin/cp public/js/* $JSPATH
+
+    # to put js file in public_html/js
+    - export IMGPATH=/home/michael3/public_html/img
+    - /bin/cp public/img/* $IMGPATH
